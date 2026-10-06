@@ -1,0 +1,825 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14271f">
+  <meta name="description" content="Грузовой электротрицикл ПТД-800: грузоподъёмность до 600 кг, запас хода до 70 км. Цена 225 000 ₽ с НДС. Запишитесь на показ в Нижнем Новгороде.">
+  <title>ПТД-800 — грузовой электротрицикл для вашей территории</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #14271f;
+      --muted: #607168;
+      --green: #286c4b;
+      --green-dark: #1a5038;
+      --lime: #c6ef75;
+      --cream: #f5f4ed;
+      --paper: #fffefa;
+      --line: #e5e8df;
+      --orange: #ed7547;
+      --radius: 22px;
+      --shadow: 0 24px 70px rgba(20, 39, 31, .10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "Manrope", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+      content: "";
+    }
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 22px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background .2s ease, transform .2s ease;
+      cursor: pointer;
+    }
+    .button:hover { transform: translateY(-2px); background: var(--green-dark); }
+    .button--light { background: white; color: var(--ink); }
+    .button--light:hover { background: var(--lime); }
+    .button svg { width: 17px; height: 17px; }
+
+    .header {
+      position: relative;
+      z-index: 2;
+      border-bottom: 1px solid rgba(20, 39, 31, .08);
+      background: rgba(255, 254, 250, .94);
+    }
+    .header__inner {
+      display: flex;
+      min-height: 78px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .brand__mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--green);
+      color: var(--lime);
+      font-size: 18px;
+      font-weight: 800;
+    }
+    .nav { display: flex; align-items: center; gap: 28px; }
+    .nav a {
+      color: #4c5d53;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .nav a:hover { color: var(--green); }
+    .header__contact { display: flex; align-items: center; gap: 16px; }
+    .phone { font-size: 14px; font-weight: 800; text-decoration: none; white-space: nowrap; }
+    .header .button { min-height: 44px; padding-inline: 17px; font-size: 13px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 68px;
+      background:
+        radial-gradient(ellipse at 75% 25%, rgba(198, 239, 117, .24), transparent 33%),
+        var(--cream);
+    }
+    .hero__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.02fr;
+      align-items: center;
+      gap: 52px;
+    }
+    .hero h1 {
+      max-width: 620px;
+      margin: 18px 0 18px;
+      font-size: clamp(42px, 5.2vw, 68px);
+      line-height: 1.04;
+      letter-spacing: -.06em;
+    }
+    .hero h1 span { color: var(--green); }
+    .hero__lead {
+      max-width: 510px;
+      margin: 0;
+      color: #53645a;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+    .hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .hero__note { margin: 16px 0 0; color: var(--muted); font-size: 12px; }
+    .hero__photo {
+      position: relative;
+      min-height: 380px;
+      padding: 15px;
+      border: 1px solid rgba(20, 39, 31, .08);
+      border-radius: 28px;
+      background: white;
+      box-shadow: var(--shadow);
+      transform: rotate(1.2deg);
+    }
+    .hero__photo img {
+      width: 100%;
+      height: 350px;
+      border-radius: 18px;
+      background: #e8ebe5;
+      object-fit: cover;
+    }
+    .photo-tag {
+      position: absolute;
+      right: -17px;
+      bottom: 26px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border-radius: 15px;
+      background: var(--ink);
+      color: white;
+      box-shadow: var(--shadow);
+      transform: rotate(-1.2deg);
+    }
+    .photo-tag strong { display: block; font-size: 17px; }
+    .photo-tag small { display: block; margin-top: 2px; color: #bdc9bf; font-size: 11px; }
+    .photo-tag__icon {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--lime);
+      color: var(--ink);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .stats { position: relative; z-index: 1; margin-top: -1px; background: var(--green); color: white; }
+    .stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+    .stat { padding: 25px 20px 27px; border-right: 1px solid rgba(255,255,255,.2); }
+    .stat:first-child { padding-left: 0; }
+    .stat:last-child { border: 0; }
+    .stat strong { display: block; color: var(--lime); font-size: 27px; letter-spacing: -.04em; }
+    .stat span { display: block; margin-top: 4px; color: rgba(255,255,255,.82); font-size: 12px; }
+
+    .section { padding: 100px 0; }
+    .section--soft { background: var(--cream); }
+    .section__heading { max-width: 700px; margin-bottom: 38px; }
+    .section h2 {
+      margin: 14px 0 12px;
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      letter-spacing: -.05em;
+    }
+    .section__intro { max-width: 640px; margin: 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
+    .use-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .use-card {
+      min-height: 248px;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+    .use-card__icon {
+      display: grid;
+      width: 50px;
+      height: 50px;
+      place-items: center;
+      border-radius: 15px;
+      background: #eaf3df;
+      color: var(--green);
+      font-size: 23px;
+    }
+    .use-card h3 { margin: 22px 0 8px; font-size: 18px; letter-spacing: -.03em; }
+    .use-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+    .benefits__visual {
+      position: relative;
+      min-height: 405px;
+      overflow: hidden;
+      padding: 30px;
+      border-radius: 28px;
+      background: var(--green);
+      color: white;
+    }
+    .benefits__visual::after {
+      position: absolute;
+      right: -75px;
+      bottom: -130px;
+      width: 330px;
+      height: 330px;
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 50%;
+      box-shadow: 0 0 0 35px rgba(255,255,255,.04), 0 0 0 70px rgba(255,255,255,.04);
+      content: "";
+    }
+    .benefits__visual-label { color: var(--lime); font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .benefits__visual h3 { position: relative; z-index: 1; max-width: 340px; margin: 17px 0 0; font-size: 34px; line-height: 1.15; letter-spacing: -.05em; }
+    .benefits__visual img {
+      position: absolute;
+      right: 4%;
+      bottom: 4%;
+      width: 77%;
+      max-height: 240px;
+      border: 8px solid rgba(255,255,255,.15);
+      border-radius: 20px;
+      object-fit: cover;
+      transform: rotate(-3deg);
+    }
+    .check-list { display: grid; gap: 19px; margin: 28px 0 0; padding: 0; list-style: none; }
+    .check-list li { display: grid; grid-template-columns: 27px 1fr; gap: 12px; color: #53645a; font-size: 14px; line-height: 1.65; }
+    .check {
+      display: grid;
+      width: 25px;
+      height: 25px;
+      place-items: center;
+      border-radius: 50%;
+      background: #eaf3df;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 44px;
+      padding: 10px 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+    .spec {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 19px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+    .spec:nth-last-child(-n+2) { border-bottom: 0; }
+    .spec span { color: var(--muted); }
+    .spec strong { text-align: right; }
+    .spec-note { margin: 17px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; }
+
+    .buyers-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 12px 34px rgba(20, 39, 31, .05);
+    }
+    .buyers-table {
+      width: 100%;
+      min-width: 980px;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .buyers-table th {
+      padding: 15px 17px;
+      background: #edf3e8;
+      color: var(--green-dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .buyers-table td {
+      padding: 17px;
+      border-top: 1px solid var(--line);
+      color: #53645a;
+      font-size: 12px;
+      line-height: 1.6;
+      vertical-align: top;
+    }
+    .buyers-table td:first-child { color: var(--ink); font-weight: 800; }
+    .buyers-table a { color: var(--green); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    .buyers-table a:hover { color: var(--green-dark); }
+    .buyers-tip { margin: 12px 0 0; color: var(--muted); font-size: 11px; }
+
+    .offer {
+      overflow: hidden;
+      padding: 55px;
+      border-radius: 28px;
+      background: var(--ink);
+      color: white;
+    }
+    .offer__grid { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 34px; }
+    .offer .eyebrow { color: var(--lime); }
+    .offer h2 { max-width: 720px; margin: 15px 0 12px; font-size: clamp(30px, 4vw, 44px); line-height: 1.12; letter-spacing: -.05em; }
+    .offer p { max-width: 630px; margin: 0; color: #c6d0c8; font-size: 14px; line-height: 1.7; }
+    .offer__price { margin: 0 0 16px; color: var(--lime); font-size: 27px; font-weight: 800; white-space: nowrap; }
+
+    .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 54px; }
+    .contact-copy p { color: var(--muted); font-size: 14px; line-height: 1.75; }
+    .contact-lines { display: grid; gap: 14px; margin-top: 24px; }
+    .contact-lines a, .contact-lines span { font-size: 14px; font-weight: 700; text-decoration: none; }
+    .contact-lines a:hover { color: var(--green); }
+    .form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+    }
+    .field { display: grid; gap: 7px; }
+    .field--wide { grid-column: 1 / -1; }
+    .field label { font-size: 12px; font-weight: 800; }
+    .field input, .field textarea {
+      width: 100%;
+      min-height: 47px;
+      padding: 12px 14px;
+      border: 1px solid #dfe4dc;
+      border-radius: 11px;
+      outline: 0;
+      background: #fffefa;
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+    }
+    .field textarea { min-height: 91px; resize: vertical; }
+    .field input:focus, .field textarea:focus { border-color: var(--green); box-shadow: 0 0 0 3px rgba(40,108,75,.12); }
+    .form__bottom { display: flex; grid-column: 1 / -1; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .form__note { max-width: 310px; margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+
+    .footer { padding: 24px 0; border-top: 1px solid var(--line); }
+    .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
+    .footer a { color: var(--muted); font-size: 11px; text-decoration: none; }
+
+    @media (max-width: 900px) {
+      .nav { display: none; }
+      .hero { padding: 55px 0; }
+      .hero__grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .hero__photo { min-height: 320px; }
+      .hero__photo img { height: 290px; }
+      .benefits { gap: 38px; }
+      .offer { padding: 40px; }
+    }
+    @media (max-width: 680px) {
+      .wrap { width: min(100% - 34px, 500px); }
+      .header__inner { min-height: 68px; }
+      .brand { font-size: 15px; }
+      .header__contact { gap: 0; }
+      .header__contact .button { display: none; }
+      .phone { font-size: 12px; }
+      .hero { padding: 43px 0 46px; }
+      .hero__grid, .benefits, .contact-grid { grid-template-columns: 1fr; }
+      .hero__grid { gap: 33px; }
+      .hero h1 { font-size: clamp(42px, 12vw, 60px); }
+      .hero__lead { font-size: 15px; }
+      .hero__photo { min-height: 270px; margin: 0 8px 14px 0; }
+      .hero__photo img { height: 245px; }
+      .photo-tag { right: -10px; bottom: -6px; padding: 11px 14px; }
+      .stats__grid { grid-template-columns: 1fr 1fr; }
+      .stat { padding: 18px 12px; border-bottom: 1px solid rgba(255,255,255,.2); }
+      .stat:first-child { padding-left: 12px; }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-last-child(-n+2) { border-bottom: 0; }
+      .stat strong { font-size: 23px; }
+      .stat span { font-size: 11px; }
+      .section { padding: 70px 0; }
+      .use-grid { grid-template-columns: 1fr; }
+      .use-card { min-height: auto; }
+      .benefits__visual { min-height: 350px; }
+      .benefits__visual h3 { font-size: 30px; }
+      .specs { grid-template-columns: 1fr; padding: 6px 19px; }
+      .spec:nth-last-child(2) { border-bottom: 1px solid var(--line); }
+      .buyers-table { min-width: 920px; }
+      .offer { padding: 30px 24px; }
+      .offer__grid { grid-template-columns: 1fr; gap: 24px; }
+      .offer__price { margin-bottom: 12px; }
+      .form { grid-template-columns: 1fr; padding: 20px; }
+      .field--wide, .form__bottom { grid-column: auto; }
+      .form__bottom { align-items: flex-start; }
+      .footer__inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="brand" href="#" aria-label="ПТД-800 — на главную">
+        <span class="brand__mark">П</span>
+        <span>ПТД-800 <span style="color:#718078;font-weight:600">/ грузовой электротрицикл</span></span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#applications">Применение</a>
+        <a href="#specifications">Характеристики</a>
+        <a href="#buyers">Покупатели</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header__contact">
+        <a class="phone" href="tel:88007707758">8 800 770-77-58</a>
+        <a class="button" href="#contacts">Узнать подробнее</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div>
+          <span class="eyebrow">Для работы на своей территории</span>
+          <h1>Перевозите больше.<br><span>Тратьте меньше сил.</span></h1>
+          <p class="hero__lead">Грузовой электротрицикл ПТД-800 — для ежедневных перевозок на ферме, в теплице, на складе или базе отдыха.</p>
+          <div class="hero__actions">
+            <a class="button" href="#contacts">
+              Записаться на показ
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button button--light" href="tel:88007707758">Позвонить</a>
+          </div>
+          <p class="hero__note">Покажем технику и обсудим ваш маршрут и условия работы.</p>
+        </div>
+        <div class="hero__photo">
+          <img src="https://thb.tildacdn.com/tild3732-6537-4630-b139-346461323638/-/resize/1000x/1a59e408-30fb-443a-9.jpeg" alt="Грузовой электротрицикл ПТД-800" fetchpriority="high">
+          <div class="photo-tag">
+            <span class="photo-tag__icon">↗</span>
+            <span><strong>До 600 кг</strong><small>номинальная грузоподъёмность</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Ключевые характеристики">
+      <div class="wrap stats__grid">
+        <div class="stat"><strong>600 кг</strong><span>номинальная грузоподъёмность</span></div>
+        <div class="stat"><strong>до 70 км</strong><span>запас хода на одном заряде*</span></div>
+        <div class="stat"><strong>800 Вт</strong><span>мощность электродвигателя</span></div>
+        <div class="stat"><strong>225 000 ₽</strong><span>с НДС, по данным продавца</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="wrap">
+        <div class="section__heading">
+          <span class="eyebrow">Практичные задачи</span>
+          <h2>Когда нужно перемещать грузы, а не гонять большой транспорт</h2>
+          <p class="section__intro">ПТД-800 может подойти для внутренних перевозок на коротких маршрутах. Важно сверить условия эксплуатации с вашей территорией и нагрузкой.</p>
+        </div>
+        <div class="use-grid">
+          <article class="use-card">
+            <div class="use-card__icon" aria-hidden="true">♧</div>
+            <h3>Фермы и теплицы</h3>
+            <p>Перевозка урожая, кормов, тары, инструмента и расходных материалов между рабочими зонами.</p>
+          </article>
+          <article class="use-card">
+            <div class="use-card__icon" aria-hidden="true">⌂</div>
+            <h3>Базы отдыха и отели</h3>
+            <p>Доставка инвентаря и хозяйственных грузов по территории комплекса без лишних поездок на автомобиле.</p>
+          </article>
+          <article class="use-card">
+            <div class="use-card__icon" aria-hidden="true">▦</div>
+            <h3>Склады и предприятия</h3>
+            <p>Внутренние перемещения там, где важны компактность, манёвренность и доступ к грузовой площадке.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="wrap benefits">
+        <div class="benefits__visual">
+          <span class="benefits__visual-label">ПТД-800</span>
+          <h3>Сначала проверим на вашем маршруте</h3>
+          <img src="https://thb.tildacdn.com/tild3732-6537-4630-b139-346461323638/-/resize/700x/1a59e408-30fb-443a-9.jpeg" alt="Грузовая площадка электротрицикла ПТД-800" loading="lazy">
+        </div>
+        <div>
+          <span class="eyebrow">Показ и подбор</span>
+          <h2>Не просто характеристики — оценка вашей задачи</h2>
+          <p class="section__intro">Чтобы понять, подойдёт ли модель, обсудим параметры вашей работы до покупки.</p>
+          <ul class="check-list">
+            <li><span class="check">✓</span><span>Какой груз вы перевозите и как часто?</span></li>
+            <li><span class="check">✓</span><span>Какая длина маршрута, покрытие и есть ли подъёмы?</span></li>
+            <li><span class="check">✓</span><span>Сколько часов в день работает техника и где её можно заряжать?</span></li>
+            <li><span class="check">✓</span><span>Каковы условия доставки, гарантии и сервисного обслуживания?</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="specifications">
+      <div class="wrap">
+        <div class="section__heading">
+          <span class="eyebrow">Технические данные</span>
+          <h2>Характеристики ПТД-800</h2>
+          <p class="section__intro">Значения указаны по информации продавца. Уточните комплектацию и применимость модели под ваши условия перед заказом.</p>
+        </div>
+        <div class="specs">
+          <div class="spec"><span>Номинальная грузоподъёмность</span><strong>600 кг</strong></div>
+          <div class="spec"><span>Мощность электродвигателя</span><strong>800 Вт</strong></div>
+          <div class="spec"><span>Максимальная скорость</span><strong>до 40 км/ч</strong></div>
+          <div class="spec"><span>Запас хода на одном заряде</span><strong>до 70 км*</strong></div>
+          <div class="spec"><span>Аккумулятор</span><strong>свинцово-кислотный, 48 В, 32 А·ч</strong></div>
+          <div class="spec"><span>Время зарядки</span><strong>8–10 часов</strong></div>
+          <div class="spec"><span>Размер грузового отсека</span><strong>1500 × 1000 мм</strong></div>
+          <div class="spec"><span>Габариты</span><strong>2950 × 1000 × 1300 мм</strong></div>
+          <div class="spec"><span>Дорожный просвет</span><strong>200 мм</strong></div>
+          <div class="spec"><span>Снаряжённая масса</span><strong>198 кг</strong></div>
+        </div>
+        <p class="spec-note">* Фактический запас хода зависит от нагрузки, покрытия, температуры и состояния аккумулятора. Номинальная грузоподъёмность — параметр производителя; допустимость использования следует оценивать с учётом условий эксплуатации.</p>
+      </div>
+    </section>
+
+    <section class="section section--soft">
+      <div class="wrap">
+        <div class="offer">
+          <div class="offer__grid">
+            <div>
+              <span class="eyebrow">Предложение продавца</span>
+              <h2>ПТД-800 для вашей территории</h2>
+              <p>Свяжитесь с нами, чтобы уточнить актуальное наличие, комплектацию, условия оплаты и доставки, а также договориться о показе.</p>
+            </div>
+            <div>
+              <div class="offer__price">225 000 ₽ <span style="font-size:14px;font-weight:600">с НДС</span></div>
+              <a class="button button--light" href="#contacts">Запросить условия</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="buyers">
+      <div class="wrap">
+        <div class="section__heading">
+          <span class="eyebrow">Нижегородская область</span>
+          <h2>Кому может подойти ПТД-800</h2>
+          <p class="section__intro">Список организаций для первичного предложения и проверки спроса. Это потенциальные покупатели, а не подтверждённые заявки. Перед визитом проверьте актуальность контактов и договоритесь о показе.</p>
+        </div>
+        <div class="buyers-wrap" role="region" aria-label="Таблица потенциальных покупателей; прокручивается по горизонтали на узком экране" tabindex="0">
+          <table class="buyers-table">
+            <thead>
+              <tr>
+                <th scope="col">Организация</th>
+                <th scope="col">Почему может подойти</th>
+                <th scope="col">Адрес</th>
+                <th scope="col">Телефон</th>
+                <th scope="col">Электронная почта</th>
+                <th scope="col">Источник</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Питомник-садовый центр «Аллея»</td>
+                <td>Питомник и садовый центр; возможны перевозки растений и инвентаря по территории.</td>
+                <td>Нижегородская область, сельское поселение Новинки, ул. Центральная, д. 18, лит. А</td>
+                <td><a href="tel:+78312304747">8 (831) 230-47-47</a><br><a href="tel:+78312308292">8 (831) 230-82-92</a><br><a href="tel:+79202519494">8 (920) 251-94-94</a></td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://www.ruspitomniki.ru/pitomniki-rossii/293/" target="_blank" rel="noopener noreferrer">Карточка питомника</a></td>
+              </tr>
+              <tr>
+                <td>Агрокомбинат «Горьковский»</td>
+                <td>Тепличное овощное хозяйство; возможны внутренние перевозки между рабочими зонами.</td>
+                <td>Нижний Новгород; точный адрес площадки уточнить</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%90%D0%B3%D1%80%D0%BE%D0%BA%D0%BE%D0%BC%D0%B1%D0%B8%D0%BD%D0%B0%D1%82%20%D0%93%D0%BE%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4" target="_blank" rel="noopener noreferrer">Найти на карте</a></td>
+              </tr>
+              <tr>
+                <td>База отдыха «Спутник»</td>
+                <td>Территория около 10 га и несколько зон отдыха; потенциальны хозяйственные перевозки.</td>
+                <td>Нижегородская область, Городецкий район, д. Оскордино</td>
+                <td><a href="tel:+78312280041">8 (831) 228-00-41</a><br><a href="tel:+78312613435">8 (831) 261-34-35</a><br><a href="tel:+78316146176">8 (8316) 14-61-76</a></td>
+                <td><a href="mailto:sputnic@bk.ru">sputnic@bk.ru</a></td>
+                <td><a href="https://sputniknn.ru/contacts/" target="_blank" rel="noopener noreferrer">Официальные контакты</a></td>
+              </tr>
+              <tr>
+                <td>Парк-отель «Изумрудное»</td>
+                <td>Загородный рекреационный комплекс; можно проверить потребность службы эксплуатации.</td>
+                <td>Нижегородская область, д. Федурино; точный адрес уточнить</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://tourism.fsa.gov.ru/ru/resorts/hotels/d0a56c55-c606-11ef-92da-7964869d41e8/about-resort" target="_blank" rel="noopener noreferrer">Реестр туризма</a></td>
+              </tr>
+              <tr>
+                <td>Санаторий «Зелёный город»</td>
+                <td>Курортная территория; возможен сценарий хозяйственной доставки.</td>
+                <td>Нижний Новгород, курортный посёлок Зелёный город</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://zel-gorod.ru/" target="_blank" rel="noopener noreferrer">Сайт санатория</a></td>
+              </tr>
+              <tr>
+                <td>Конный клуб «Аллюр»</td>
+                <td>Конный клуб и база отдыха; возможны перевозки хозяйственных грузов по территории.</td>
+                <td>Примерно в 20 км от Нижнего Новгорода; точный адрес уточнить</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://sportkurort.ru/nizhniy-novgorod/pokatatsya-na-loshadkah/konnyy-klub-allyur-8404" target="_blank" rel="noopener noreferrer">Карточка клуба</a></td>
+              </tr>
+              <tr>
+                <td>База отдыха «Дача на Горе-Море»</td>
+                <td>База отдыха на загородной территории; потенциальны хозяйственные перевозки.</td>
+                <td>Нижегородская область, д. Малый Суходол, д. 138</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://2gis.ru/n_novgorod/firm/70000001060865667" target="_blank" rel="noopener noreferrer">Карточка в 2ГИС</a></td>
+              </tr>
+              <tr>
+                <td>ТК «Стройпарк»</td>
+                <td>Строительный гипермаркет с большой территорией складского комплекса; перевозка товаров между зонами хранения и погрузки.</td>
+                <td>Нижний Новгород, пр. Ленина, 88</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://2gis.ru/n_novgorod/search/%D0%A2%D0%9A%20%D0%A1%D1%82%D1%80%D0%BE%D0%B9%D0%BF%D0%B0%D1%80%D0%BA" target="_blank" rel="noopener noreferrer">Поиск в 2ГИС</a></td>
+              </tr>
+              <tr>
+                <td>Парк «Швейцария»</td>
+                <td>Парк культуры и отдыха с развитой инфраструктурой; возможна доставка инвентаря и обслуживание зон.</td>
+                <td>Нижний Новгород, Канавинский район</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%9F%D0%B0%D1%80%D0%BA%20%D0%A8%D0%B2%D0%B5%D0%B9%D1%86%D0%B0%D1%80%D0%B8%D1%8F%20%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>Садовый центр «Дубки»</td>
+                <td>Продажа растений, саженцев и садовой техники; перевозка товара по территории центра и питомника.</td>
+                <td>Нижний Новгород, Казанское шоссе</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%B4%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%86%D0%B5%D0%BD%D1%82%D1%80%20%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>Сормовский парк культуры и отдыха</td>
+                <td>Крупный городской парк; хозяйственные перевозки при обслуживании территории и аттракционов.</td>
+                <td>Нижний Новгород, Сормовский район, ул. Коминтерна</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%A1%D0%BE%D1%80%D0%BC%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D0%BF%D0%B0%D1%80%D0%BA" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>База отдыха «Хольбино»</td>
+                <td>Загородный комплекс для отдыха и корпоративных мероприятий; обслуживание территории и доставка.</td>
+                <td>Нижегородская область, Борский район</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%91%D0%B0%D0%B7%D0%B0%20%D0%BE%D1%82%D0%B4%D1%8B%D1%85%D0%B0%20%D0%A5%D0%BE%D0%BB%D1%8C%D0%B1%D0%B8%D0%BD%D0%BE" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>Нижегородская ярмарка</td>
+                <td>Выставочный комплекс с обширной территорией; логистика при подготовке выставок и мероприятий.</td>
+                <td>Нижний Новгород, Совнаркомовская ул., 13</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://www.yarmarka.ru/" target="_blank" rel="noopener noreferrer">Официальный сайт</a></td>
+              </tr>
+              <tr>
+                <td>Тепличный комплекс «Борский»</td>
+                <td>Тепличное хозяйство; внутренние перевозки урожая, грунта, удобрений между теплицами.</td>
+                <td>Нижегородская область, Борский район</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%A2%D0%B5%D0%BF%D0%BB%D0%B8%D1%86%D1%8B%20%D0%91%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>ООО «Дзержинская птицефабрика»</td>
+                <td>Птицеводческое хозяйство; перевозка кормов, тары, инвентаря между производственными корпусами.</td>
+                <td>Нижегородская область, г. Дзержинск</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%94%D0%B7%D0%B5%D1%80%D0%B6%D0%B8%D0%BD%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BF%D1%82%D0%B8%D1%86%D0%B5%D1%84%D0%B0%D0%B1%D1%80%D0%B8%D0%BA%D0%B0" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>Дачный кооператив «Сокол»</td>
+                <td>Крупное садоводческое товарищество; общехозяйственные нужды, вывоз мусора, доставка материалов.</td>
+                <td>Нижний Новгород, Автозаводский район</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%B4%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE%20%D0%A1%D0%BE%D0%BA%D0%BE%D0%BB%20%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>Загородный клуб «Пестово»</td>
+                <td>Клуб с гольф-полем, рестораном и зоной отдыха; обслуживание территории и доставка инвентаря.</td>
+                <td>Нижегородская область, Кстовский район, д. Пестово</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://yandex.ru/maps/?text=%D0%9F%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%20%D0%9A%D1%81%D1%82%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD" target="_blank" rel="noopener noreferrer">Поиск на картах</a></td>
+              </tr>
+              <tr>
+                <td>Ботанический сад ННГУ</td>
+                <td>Университетский ботанический сад; перевозка растений, грунта, оборудования по территории.</td>
+                <td>Нижний Новгород, пр. Гагарина, 23</td>
+                <td>Не удалось подтвердить</td>
+                <td>Не удалось подтвердить</td>
+                <td><a href="https://www.unn.ru/site/about/struktura/botsad" target="_blank" rel="noopener noreferrer">Сайт ботсада</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="buyers-tip">Неподтверждённые контакты не заменяйте догадками. Обращайтесь к руководителю эксплуатации, главному инженеру или отделу закупок.</p>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Связаться с продавцом</span>
+          <h2>Обсудим ваш маршрут?</h2>
+          <p>Позвоните или оставьте запрос — подскажем, как договориться о показе и какие параметры техники уточнить для вашей задачи.</p>
+          <div class="contact-lines">
+            <a href="tel:88007707758">8 800 770-77-58</a>
+            <a href="mailto:ptd-nn@yandex.ru">ptd-nn@yandex.ru</a>
+            <span>Нижний Новгород, ул. Генкиной, д. 33/59а, помещ. П4</span>
+          </div>
+        </div>
+        <form class="form" id="request-form">
+          <div class="field">
+            <label for="name">Ваше имя</label>
+            <input id="name" name="name" autocomplete="name" placeholder="Как к вам обращаться" required>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 ___ ___-__-__" required>
+          </div>
+          <div class="field field--wide">
+            <label for="message">Что планируете перевозить?</label>
+            <textarea id="message" name="message" placeholder="Груз, расстояние, условия маршрута — если уже знаете"></textarea>
+          </div>
+          <div class="form__bottom">
+            <button class="button" type="submit">Подготовить письмо</button>
+            <p class="form__note">Откроется ваше почтовое приложение с подготовленным запросом. Форма не отправляет данные на сервер.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <p>ПТД-800 · Информация и характеристики представлены по данным продавца.<br>Условия, наличие и комплектацию уточняйте перед заказом.</p>
+      <a href="https://ptdnn.ru/ptd800" target="_blank" rel="noopener noreferrer">Источник характеристик — сайт ПТД</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("request-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const subject = encodeURIComponent("Запрос по электротрициклу ПТД-800");
+      const body = encodeURIComponent(
+        "Имя: " + data.get("name") + "\n" +
+        "Телефон: " + data.get("phone") + "\n" +
+        "Задача: " + (data.get("message") || "Не указана")
+      );
+      window.location.href = "mailto:ptd-nn@yandex.ru?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
